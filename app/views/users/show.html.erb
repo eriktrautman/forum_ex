@@ -7,3 +7,6 @@
   <%= render partial: "shared/post_comment", collection: @posts,
               as: :post %>
 </ul>
+<hr/>
+<h4>Your API Key:</h4>
+<%= @user.api_key %>

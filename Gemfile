@@ -13,6 +13,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'capybara'
   gem 'rack-webconsole'
+  gem 'guard-rspec'
+  gem 'guard'
+  gem 'guard-spork'
 end
 
 group :development do
@@ -25,11 +28,13 @@ end
 
 group :test do
 
-
+  gem 'spork-rails'
+  gem 'guard-spork'
   gem 'rb-fsevent', '0.9.1', :require => false
   gem 'growl'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

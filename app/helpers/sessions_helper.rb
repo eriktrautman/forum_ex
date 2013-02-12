@@ -20,4 +20,10 @@ module SessionsHelper
     end
   end
 
+  def require_api_key
+    unless !!User.find_by_api_key(params[:api_key])
+      render :json => { :error => "go get an api key"}
+    end
+  end
+
 end

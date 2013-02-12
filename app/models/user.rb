@@ -12,4 +12,9 @@ class User < ActiveRecord::Base
     self.save!
   end
 
+  def add_api_key
+    self.api_key = SecureRandom.urlsafe_base64
+    self.save!
+  end
+
 end

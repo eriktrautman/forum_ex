@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
     self.comments.where("author_id = ?", user.id)
   end
 
-  def self.commented_by(user)
+  def self.commented_or_created_by(user)
     self
       .joins("LEFT JOIN comments ON posts.id = comments.post_id")
       .where("comments.author_id = ? OR posts.author_id = ?",user.id, user.id)

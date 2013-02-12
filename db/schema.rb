@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130212002500) do
+ActiveRecord::Schema.define(:version => 20130212184337) do
 
   create_table "comments", :force => true do |t|
     t.integer  "post_id"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20130212002500) do
     t.datetime "updated_at",            :null => false
     t.string   "remember_token"
     t.datetime "last_viewed_user_page"
+    t.string   "api_key"
   end
 
   add_index "users", ["name"], :name => "index_users_on_name", :unique => true
